@@ -1,7 +1,5 @@
 // alert("JavaScript works!");
 
-//*
-
 // MY VARIABLES
 
 var myProfessor;
@@ -9,6 +7,7 @@ var myNum;
 var readyBoolean;
 var fullName;
 var meReady;
+var lastName;
 
 
 // MY FUNCTIONS
@@ -25,22 +24,26 @@ function openMessage(myProfessor) {
 
 		// BOOLEAN FUNCTION
 
-function readyBoolean(meReady, fullName) {
+function askReady(meReady, fullName) {
 	while(meReady === false) {
-		console.log("You must be ready " + fullName + "!");
+		console.log("You must be ready to continue!");
+		meReady = confirm("You must be ready " + fullName + "!");
 	} 
-	console.log("You are Ready " + fullName);
+	console.log("You are Ready " + fullName + "!");
 }
 
 
 		// STRING FUNCTION
 		
-
+function createLastName(myProfessor, lastName) {
+	fullName = myProfessor + " " + lastName;
+	console.log("Thank you for your full name, " + fullName + ".");
+}
 
 
 		// NUMBER FUNCTION
 
-function myMathSkills(myNum) { 
+function showMathSkills(myNum) { 
 	 
 	console.log("Today, " + myProfessor + ", we will be count to 10, from your lucky number, " + myNum);
 	if (myNum < 10) {
@@ -61,14 +64,22 @@ function myMathSkills(myNum) {
 
 	
 // MAIN CODE
-
-
-	// CALL PROCEDURE AND PROMPT FOR myProfessor String
+	
+/////		PROMPT NAME + CALL PROCEDURE FUNCTION		////////
 myProfessor = prompt("What is your name, Professor?");
 openMessage(myProfessor);
-	// CALLED NUMBER FUNCTION AND PROMPT FOR NUMBER INPUT
-myNum = parseInt(prompt("what is your lucky number, " + myProfessor + "?","1-50"));
-myMathSkills(myNum);
+
+/////		PROMPT LASTNAME + CALL STRING FUNCTION		////////
+lastName = prompt("What is your last Name?");
+createLastName(myProfessor, lastName);
+
+/////		CONFIRM READY + CALL BOOLEAN FUNCTION		////////
+meReady = confirm("Are you ready to continue?");
+askReady(meReady, fullName);
+
+/////		PROMPT NUMBER + CALL NUMBER FUNCTION		////////
+myNum = parseInt(prompt("what is your lucky number Professor " + fullName + "?","1-50"));
+showMathSkills(myNum);
 
 
 
@@ -78,5 +89,3 @@ console.log("myNum Variable within my Number Function: " + myNum);
 console.log("myNum Variable within my Number Function: " + myNum);
 console.log("myNum Variable within my Number Function: " + myNum);
 
-
-//*/
