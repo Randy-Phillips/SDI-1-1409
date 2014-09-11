@@ -4,24 +4,41 @@
 
 // MY VARIABLES
 
-var myProfessor = "Lee";
-var mNum;
-var myBoolean = true;
+var myProfessor;
+var myNum;
+var readyBoolean;
+var fullName;
+var meReady;
 
 
 // MY FUNCTIONS
-		// PROCEDURE
+		// PROCEDURE FUNCTION
 		
 function openMessage(myProfessor) {
 	
-	if (myProfessor === "Lee") {
-		console.log("You are my Professor");
+	if (myProfessor === "Lee" || "lee" || "LEE") {
+		console.log("You are my Professor!");
 	} else {
-		console.log("You are NOT my Professor");
+		console.log("You are NOT my Professor!");
 	}
 }
 
+		// BOOLEAN FUNCTION
 
+function readyBoolean(meReady, fullName) {
+	while(meReady === false) {
+		console.log("You must be ready " + fullName + "!");
+	} 
+	console.log("You are Ready " + fullName);
+}
+
+
+		// STRING FUNCTION
+		
+
+
+
+		// NUMBER FUNCTION
 
 function myMathSkills(myNum) { 
 	 
@@ -42,15 +59,24 @@ function myMathSkills(myNum) {
 	
 }
 
-
-
+	
 // MAIN CODE
 
 
+	// CALL PROCEDURE AND PROMPT FOR myProfessor String
 myProfessor = prompt("What is your name, Professor?");
 openMessage(myProfessor);
-	
+	// CALLED NUMBER FUNCTION AND PROMPT FOR NUMBER INPUT
 myNum = parseInt(prompt("what is your lucky number, " + myProfessor + "?","1-50"));
 myMathSkills(myNum);
+
+
+
+// RETURNED VALUES
+
+console.log("myNum Variable within my Number Function: " + myNum);
+console.log("myNum Variable within my Number Function: " + myNum);
+console.log("myNum Variable within my Number Function: " + myNum);
+
 
 //*/
