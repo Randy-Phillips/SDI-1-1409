@@ -4,7 +4,6 @@
 
 var myProfessor;
 var myNum;
-var readyBoolean;
 var fullName;
 var meReady;
 var lastName;
@@ -83,9 +82,16 @@ showMathSkills(myNum);
 
 
 
-// RETURNED VALUES
 
-console.log("myNum Variable within my Number Function: " + myNum);
-console.log("myNum Variable within my Number Function: " + myNum);
-console.log("myNum Variable within my Number Function: " + myNum);
+// RETURNED VALUES
+		/// Spacer for console log
+console.log("//////////////////////////////////");
+console.log("meReady Variable: " + meReady);
+console.log("myNum Variable: " + myNum);
+console.log("myProfessor Variable: " + myProfessor);
+console.log("lastName Variable: " + lastName);
+console.log("fullName Variable: " + fullName);
+
+
+
 
