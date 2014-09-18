@@ -93,8 +93,12 @@ var arrayArg = function(argArray) {
 	if (argArray.length > 5) {
 		var stringReturn = "We have a big array remaining!";
 		return stringReturn;
-		} else { 
-		var stringReturn = "string is short!";
+		} else if (argArray.lengh < 1) { 
+		
+		var stringReturn = "array is short!";
+		return stringReturn;
+	} else {
+		var stringReturn = "array is normal."
 		return stringReturn;
 	}
 }
