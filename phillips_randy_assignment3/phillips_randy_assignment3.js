@@ -4,7 +4,7 @@
 
 
 // Global Variables
-
+	
 var avgHourYr = 2080;
 var firstIncome = 1;
 var secondIncome = 2;
@@ -63,13 +63,13 @@ var readyLoop = function() {
 }
 
 
-// Returned Number(s) + 1 Function + Local Variables
+// Returned Number(s) + 1 Function + Local Variables + Number Arguments
 
 var annualIncome = function (personName,personIncome,personTax) {
 	
 	var salaryCalc = (personIncome * (1 - personTax)) * avgHourYr;
 	
-	say(personName + " makes $" + salaryCalc  + " a year");
+	say(personName + " makes $" + salaryCalc  + " a year after taxes.");
    
    return salaryCalc;
 }
@@ -90,9 +90,12 @@ var Array2 = function(number,string) {
 
 var arrayArg = function(argArray) {
 	say("there are " + argArray.length + " elements in my array.");
-	if (argArray < 5) {
-		var stringReturn = "We have a big string remaining";
-		
+	if (argArray.length > 5) {
+		var stringReturn = "We have a big array remaining!";
+		return stringReturn;
+		} else { 
+		var stringReturn = "string is short!";
+		return stringReturn;
 	}
 }
 
@@ -111,7 +114,7 @@ say("While money isn't everything, so isn't creativity. I can't think of anythin
 
 var array = Array2(2,"theman");
 
-arrayArg(array);
+var stringReturn = arrayArg(array);
 
 // Outputs
 say("____________________");
