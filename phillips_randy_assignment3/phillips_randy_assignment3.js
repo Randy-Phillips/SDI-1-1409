@@ -1,3 +1,7 @@
+// Randy D. Phillips
+// SDI 1409
+// Project 3
+
 
 // Global Variables
 
@@ -7,6 +11,7 @@ var secondIncome = 2;
 var thirdIncome = 3;
 var getReady = false;
 var array = [10,12,15,22,92,41];
+var stringReturn = "theString";
 
 // Console.log Shorthand
 function say(say) {
@@ -19,7 +24,7 @@ function say(say) {
 
 function newFuction () {
 	
-	say("So, three people, three different hourly earnings, three different tax brackets.. how much do they make a year!");
+	 say("So, three people, three different hourly earnings, three different tax brackets.. how much do they make a year!");
 	
 }
 
@@ -78,12 +83,17 @@ var Array2 = function(number,string) {
 	array[array.length] = string;
 	return array;
 	
+	
 }
 
 // Array argument
 
 var arrayArg = function(argArray) {
 	say("there are " + argArray.length + " elements in my array.");
+	if (argArray < 5) {
+		var stringReturn = "We have a big string remaining";
+		
+	}
 }
 
 // Main Code
@@ -97,7 +107,7 @@ var secondIncome = annualIncome(jsonData.playerNames[1].personFirstName,jsonData
 
 var thridIncome = annualIncome(jsonData.playerNames[2].personFirstName,jsonData.playerNames[2].hrIncome,jsonData.playerNames[2].overallTax);
 
-say("While money isn't everything, so isn't creativity. I can't think of anything right now to make a story but I can show you what I know");
+say("While money isn't everything, so isn't creativity. I can't think of anything right now to make a story but I can show you what I know.");
 
 var array = Array2(2,"theman");
 
@@ -108,4 +118,5 @@ say("____________________");
 say(firstIncome);
 say(getReady);
 say(array);
+say(stringReturn);
 
