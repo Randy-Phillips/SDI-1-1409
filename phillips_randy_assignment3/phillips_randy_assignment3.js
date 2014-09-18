@@ -1,9 +1,5 @@
 //*
 
-console.log("it works");
-
-jsonData.playerNames[0][2]
-
 // Global Variables
 
 var annualSalary = 1;
@@ -29,15 +25,16 @@ var forLoop = function() {
 	}
 }
 
-// Nested Loop
+// 
 
 var annualIncome = function (personName,personIncome,personTax) {
-
-console.log(personName + " makes $" + (personIncome * (1 - personTax)) * avgHourYr + " a year");
-
+	
+	var salaryCalc = (personIncome * (1 - personTax)) * avgHourYr;
+	
+	console.log(personName + " makes $" + salaryCalc  + " a year");
+   
+   return salaryCalc;
 }
-
-
 
 
 
@@ -46,9 +43,14 @@ console.log(personName + " makes $" + (personIncome * (1 - personTax)) * avgHour
 newFuction();
 forLoop();
 
-annualIncome(jsonData.playerNames[0].personFirstName,jsonData.playerNames[0].hrIncome,jsonData.playerNames[0].overallTax);
+var firstIncome = annualIncome(jsonData.playerNames[0].personFirstName,jsonData.playerNames[0].hrIncome,jsonData.playerNames[0].overallTax);
 
 annualIncome(jsonData.playerNames[1].personFirstName,jsonData.playerNames[1].hrIncome,jsonData.playerNames[1].overallTax);
 
 annualIncome(jsonData.playerNames[2].personFirstName,jsonData.playerNames[2].hrIncome,jsonData.playerNames[2].overallTax);
+
+
+
+
+console.log(firstIncome);
 //*/
