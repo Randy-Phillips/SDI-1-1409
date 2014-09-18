@@ -31,15 +31,24 @@ var forLoop = function() {
 
 // Nested Loop
 
-var anualIncome = function (personName,personIncome,personTax) {
+var annualIncome = function (personName,personIncome,personTax) {
 
 console.log(personName + " makes $" + (personIncome * (1 - personTax)) * avgHourYr + " a year");
 
 }
 
+
+
+
+
+// Main Code
+
 newFuction();
 forLoop();
-anualIncome(jsonData.playerNames[0].personFirstName,jsonData.playerNames[0].hrIncome,jsonData.playerNames[0].overallTax);
-anualIncome(jsonData.playerNames[1].personFirstName,jsonData.playerNames[1].hrIncome,jsonData.playerNames[1].overallTax);
-anualIncome(jsonData.playerNames[2].personFirstName,jsonData.playerNames[2].hrIncome,jsonData.playerNames[2].overallTax);
+
+annualIncome(jsonData.playerNames[0].personFirstName,jsonData.playerNames[0].hrIncome,jsonData.playerNames[0].overallTax);
+
+annualIncome(jsonData.playerNames[1].personFirstName,jsonData.playerNames[1].hrIncome,jsonData.playerNames[1].overallTax);
+
+annualIncome(jsonData.playerNames[2].personFirstName,jsonData.playerNames[2].hrIncome,jsonData.playerNames[2].overallTax);
 //*/
