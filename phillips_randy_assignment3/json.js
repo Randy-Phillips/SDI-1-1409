@@ -3,22 +3,22 @@ var jsonData = {
 	"playerNames":
 		[
 			{
-				"personFirstName"   : "Randy",
-				"personLastName"    : "Phillips",
-				"personHrIncome"    :  10,
-				"overallTax"        : .20,
+				"personFirstName"   : "James",
+				"personLastName"    : "Franklin",
+				"hrIncome"          : 22.00,
+				"overallTax"        : .20
 			},
 			{
-				"personFirstName"   : "John",
-				"personLastName"    : "Doe",
-				"personHrIncome"    :  12,
-				"overallTax"        : .22,
+				"personFirstName"   : "Leroy",
+				"personLastName"    : "Jenkins",
+				"hrIncome"          : 25.00,
+				"overallTax"        : .25
 			},
 			{
-				"personFirstName"   : "Lee",
-				"personLastName"    : "Lewis",
-				"personHrIncome"    :  14,
-				"overallTax"        : .25,
+				"personFirstName"   : "Jenny",
+				"personLastName"    : "Smith",
+				"hrIncome"          : 30.00,
+				"overallTax"        : .30
 			},
 		
 		
