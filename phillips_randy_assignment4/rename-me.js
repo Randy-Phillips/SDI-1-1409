@@ -21,26 +21,29 @@ var checkEmail = function(myEmail) {
     if (atSign > 1 && periodSign > atSign + 1 && periodSign + 1 < myEmail.length && spaceCheck === -1 && lastAtSign === atSign) {
        
         return true;
+    
    } else {
         
         return false;
-    
-   };
+    };
 }
 
 
         // URL Validaiton Function
 
 var checkUrl = function(myUrl) {
-    var httpUrl = "http://";
-    var httpsUrl = "https://";
+    var pUrl = myUrl.indexOf("http://");
+    var sUrl = myUrl.indexOf("https://");
     
-    if (myUrl.contains(httpUrl || httpsUrl)) {
-        console.log("yes");
+    if (pUrl === 0 || sUrl === 0) {
+        
+        return true;
+    
     } else {
-        console.log("no");
+        
+        return false;
     }
-    
+   
 }
 
 
@@ -57,7 +60,7 @@ console.log("e-mail is " + emailReturn);
         
 var urlImput = prompt("enterURL");
 
-var urlReturn = checkUrl("urlImput");
+var urlReturn = checkUrl(urlImput);
 
 console.log("Url is " + urlReturn);
 
