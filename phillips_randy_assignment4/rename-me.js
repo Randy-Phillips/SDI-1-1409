@@ -29,7 +29,7 @@ var checkEmail = function(myEmail) {
 }
 
 
-        // URL Validaiton Function
+        // URL Validation Function
 
 var checkUrl = function(myUrl) {
     var pUrl = myUrl.indexOf("http://");
@@ -47,21 +47,65 @@ var checkUrl = function(myUrl) {
 }
 
 
+        //  Money Formatting Function
+        
+var formatMoney = function(valueImput) {
+    var nanCheck = isNaN(valueImput);
+  //  var valueFormatted = valueImput.toFixed(2);
+    
+    if (nanCheck === true) {
+       // return("NaN");
+       console.log("a");
+    } else {
+        //return(valueFormatted);
+        console.log("b");
+    }
+};
+
+
+        // Return as Number
+        
+var convertString = function(stringVal) {
+    var stringParse = parseFloat(stringVal);
+    
+    if (stringParse !== isNaN) {
+        return stringParse;
+    } else {
+        return false;
+    }
+}
+
+
+
 // Outputs
 
         // Email Outputs
-var emailImput = prompt("enterEmail");
+var emailImput = prompt("enter an Email Address");
 
 var emailReturn = checkEmail(emailImput);
 
-console.log("e-mail is " + emailReturn);
+console.log("e-mail address: " + emailImput + " is " + emailReturn);
 
         // URL Outputs
         
-var urlImput = prompt("enterURL");
+var urlImput = prompt("enter a URL");
 
 var urlReturn = checkUrl(urlImput);
 
-console.log("Url is " + urlReturn);
+console.log("Url address: " + urlImput + " is " + urlReturn);
 
+        // Money Format Outputs
 
+var enterValue = prompt("Enter a value");
+
+var valueReturn = formatMoney(enterValue);
+
+console.log("You have $" + valueReturn + ".");
+
+        // Return String as Number
+        
+var enterString = prompt ("Enter Number");
+
+var numberReturn = convertString(enterString);
+
+console.log(numberReturn);
