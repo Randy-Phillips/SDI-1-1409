@@ -32,8 +32,9 @@ var checkEmail = function(myEmail) {
         // URL Validation Function
 
 var checkUrl = function(myUrl) {
-    var pUrl = myUrl.indexOf("http://");
-    var sUrl = myUrl.indexOf("https://");
+    var myNewUrl = myUrl.toLowerCase();
+    var pUrl = myNewUrl.indexOf("http://");
+    var sUrl = myNewUrl.indexOf("https://");
     
     if (pUrl === 0 || sUrl === 0) {
         
