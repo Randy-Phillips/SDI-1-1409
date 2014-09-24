@@ -75,6 +75,32 @@ var convertString = function(stringVal) {
     }
 }
 
+        // Title Upper Case
+        
+var upperCase = function(titleName) {
+    var spaceVar = " ";
+    var findSpace = titleName.forEach(" ") ;
+    alert(findSpace);
+    
+}
+
+
+        // Find Smallest Vallue
+        
+var smallValue = function(argArray) {
+    var smallestValue = 0;
+    for (var i = 0; i < argArray.length; i++) {
+        
+        if (argArray[smallestValue] < argArray[i]) {
+            
+            var smallestValue = smallestValue;
+        } else {
+            var smallestValue = i;
+        }
+    }
+    
+    return argArray[smallestValue];   
+}
 
 
 // Outputs
@@ -102,10 +128,21 @@ var valueReturn = formatMoney(enterValue);
 
 console.log("You have $" + valueReturn + ".");
 
-        // Return String as Number
+        // Return String as Number Outputs
         
 var enterString = prompt ("Enter Number");
 
 var numberReturn = convertString(enterString);
 
 console.log(numberReturn);
+
+        // Title Upper Case Outputs
+  
+
+        // Smallest Value Outputs
+        
+var imputArray = [33,9,3,5,7,8,2,3,5,10,329,2304];
+
+var smallestReturned = smallValue(imputArray);
+
+console.log(smallestReturned);
