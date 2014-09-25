@@ -1,6 +1,6 @@
 // Randy D. Phillips
 // SDI 1409
-// Project 3
+// Project 4
 
 
 // Global Variables
@@ -51,15 +51,17 @@ var checkUrl = function(myUrl) {
         //  Money Formatting Function
         
 var formatMoney = function(valueImput) {
+    var newValueImput = parseFloat(valueImput);
     var nanCheck = isNaN(valueImput);
-  //  var valueFormatted = valueImput.toFixed(2);
+    var valueFormatted = newValueImput.toFixed(2);
     
     if (nanCheck === true) {
-       // return("NaN");
-       console.log("a");
+       
+        return("NaN");
+ 
     } else {
-        //return(valueFormatted);
-        console.log("b");
+        
+        return(valueFormatted);
     }
 };
 
@@ -76,30 +78,42 @@ var convertString = function(stringVal) {
     }
 }
 
-        // Title Upper Case
+        // Array Total Value
         
-var upperCase = function(titleName) {
-    var spaceVar = " ";
-    var findSpace = titleName.forEach(" ") ;
-    alert(findSpace);
+var totalValue = function(numberElement) {
     
+    var arrayTotal = 0;
+   
+    for (var i = 0; i < numberElement.length; i++) {
+        
+        if (!isNaN(parseInt(numberElement[i]))) {
+            
+            var arrayTotal = arrayTotal + parseFloat(numberElement[i]);
+    
+        } 
+    }
+    
+    return arrayTotal;   
 }
 
 
-        // Find Smallest Vallue
+
+        // Find Smallest Value
         
 var smallValue = function(argArray) {
     var smallestValue = 0;
+    
     for (var i = 0; i < argArray.length; i++) {
         
         if (argArray[smallestValue] < argArray[i]) {
             
             var smallestValue = smallestValue;
+      
         } else {
+      
             var smallestValue = i;
         }
     }
-    
     return argArray[smallestValue];   
 }
 
@@ -107,7 +121,7 @@ var smallValue = function(argArray) {
 // Outputs
 
         // Email Outputs
-var emailImput = prompt("enter an Email Address");
+var emailImput = "attackruby@fullsail.edu";
 
 var emailReturn = checkEmail(emailImput);
 
@@ -115,7 +129,7 @@ console.log("e-mail address: " + emailImput + " is " + emailReturn);
 
         // URL Outputs
         
-var urlImput = prompt("enter a URL");
+var urlImput = "HttPs://www.google.com/";
 
 var urlReturn = checkUrl(urlImput);
 
@@ -123,7 +137,7 @@ console.log("Url address: " + urlImput + " is " + urlReturn);
 
         // Money Format Outputs
 
-var enterValue = prompt("Enter a value");
+var enterValue = 21.2;
 
 var valueReturn = formatMoney(enterValue);
 
@@ -131,18 +145,23 @@ console.log("You have $" + valueReturn + ".");
 
         // Return String as Number Outputs
         
-var enterString = prompt ("Enter Number");
+var enterString = 29.184;
 
 var numberReturn = convertString(enterString);
 
 console.log(numberReturn);
 
-        // Title Upper Case Outputs
+        // Add Numbers in Array
   
+var numberArray = [4,1,1,1,"1",1,"11",1,1,"hello", true, 2.1];
+
+var totalReturn = totalValue(numberArray);
+
+console.log(totalReturn);
 
         // Smallest Value Outputs
         
-var imputArray = [33,9,3,5,7,8,2,3,5,10,329,2304];
+var imputArray = [33,9,151,53,7,8,141,111,5,10,329,2304];
 
 var smallestReturned = smallValue(imputArray);
 
