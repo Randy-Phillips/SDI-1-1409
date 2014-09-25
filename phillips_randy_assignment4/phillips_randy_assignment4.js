@@ -50,10 +50,10 @@ var checkUrl = function(myUrl) {
 
         //  Money Formatting Function
         
-var formatMoney = function(valueImput) {
-    var newValueImput = parseFloat(valueImput);
-    var nanCheck = isNaN(valueImput);
-    var valueFormatted = newValueImput.toFixed(2);
+var formatMoney = function(valueInput) {
+    var newValueInput = parseFloat(valueInput);
+    var nanCheck = isNaN(valueInput);
+    var valueFormatted = newValueInput.toFixed(2);
     
     if (nanCheck === true) {
        
@@ -121,19 +121,19 @@ var smallValue = function(argArray) {
 // Outputs
 
         // Email Outputs
-var emailImput = "attackruby@fullsail.edu";
+var emailInput = "attackruby@fullsail.edu";
 
-var emailReturn = checkEmail(emailImput);
+var emailReturn = checkEmail(emailInput);
 
-console.log("e-mail address: " + emailImput + " is " + emailReturn);
+console.log("e-mail address: " + emailInput + " is " + emailReturn);
 
         // URL Outputs
         
-var urlImput = "HttPs://www.google.com/";
+var urlInput = "HttPs://www.google.com/";
 
-var urlReturn = checkUrl(urlImput);
+var urlReturn = checkUrl(urlInput);
 
-console.log("Url address: " + urlImput + " is " + urlReturn);
+console.log("Url address: " + urlInput + " is " + urlReturn);
 
         // Money Format Outputs
 
@@ -161,8 +161,8 @@ console.log(totalReturn);
 
         // Smallest Value Outputs
         
-var imputArray = [33,9,151,53,7,8,141,111,5,10,329,2304];
+var inputArray = [33,9,151,53,7,8,141,111,5,10,329,2304];
 
-var smallestReturned = smallValue(imputArray);
+var smallestReturned = smallValue(inputArray);
 
 console.log(smallestReturned);
